@@ -1,0 +1,128 @@
+/* Signup.css */
+
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.user-type-button {
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #f0f0f0;
+  transition: background-color 0.2s;
+}
+
+.user-type-button:hover {
+  background-color: #e0e0e0;
+}
+
+.selected {
+  background-color: #3498db;
+  color: white;
+}
+
+.signup-option {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 45%;
+  margin: 10px;
+}
+
+.signup-option p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.signup-option button {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.signup-option button:hover {
+  background-color: #2980b9;
+}
+
+.or-text {
+  font-weight: bold;
+  margin: 10px;
+}
+
+/* Center the SignupJobSeeker form */
+.signup-option:nth-child(2) {
+  align-self: center;
+}
+
+/* Style the form elements */
+form {
+  max-width: 400px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+.additional-options {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.forgot-password,
+.login {
+  font-size: 16px;
+  text-decoration: none;
+  color: #3498db;
+  margin: 10px;
+}
+
+.forgot-password:hover,
+.login:hover {
+  text-decoration: underline;
+}
