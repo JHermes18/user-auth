@@ -22,60 +22,89 @@ function SignupCompany() {
   return (
     <div className="signup-container">
       <div className="signup-option">
-        <h2>I am looking to hire</h2>
+        <h3>Create your employer account right now</h3>
         <form onSubmit={handleCompanySignup}>
           <label htmlFor="companyName">Company Name:</label>
-          <input
-            type="text"
-            id="companyName"
-            name="companyName"
-            value={companyName}
-            onChange={(e) => setCompanyName(e.target.value)}
-            required
-          />
+          <div className='signup-input-form'>
+            <input
+              type="text"
+              id="companyName"
+              name="companyName"
+              value={companyName}
+              className='signup-input'
+              placeholder='WebWorkWave Inc.'
+              onChange={(e) => setCompanyName(e.target.value)}
+              required
+            />
+          </div>
           <label htmlFor="companyEmail">Email:</label>
-          <input
-            type="email"
-            id="companyEmail"
-            name="companyEmail"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+          <div className='signup-input-form'>
+
+            <input
+              type="email"
+              id="companyEmail"
+              name="companyEmail"
+              value={email}
+              className='signup-input'
+              placeholder='johndoe123@gmail.com'
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
           <label htmlFor="companyContact">Contact Number:</label>
-          <input
-            type="tel"
-            id="companyContact"
-            name="companyContact"
-            value={contactNumber}
-            onChange={(e) => setContactNumber(e.target.value)}
-            required
-          />
+          <div className='signup-input-form'>
+
+            <input
+              type="tel"
+              id="companyContact"
+              name="companyContact"
+              value={contactNumber}
+              className='signup-input'
+              placeholder='09123456789'
+              onChange={(e) => setContactNumber(e.target.value)}
+              required
+            />
+          </div>
           <label htmlFor="companyPassword">Password:</label>
-          <input
-            type="password"
-            id="companyPassword"
-            name="companyPassword"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+          <div className='signup-input-form'>
+
+            <input
+              type="password"
+              id="companyPassword"
+              name="companyPassword"
+              value={password}
+              className='signup-input'
+              placeholder='Password must be atleast 6 characters'
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
           <label htmlFor="companyConfirmPassword">Confirm Password:</label>
-          <input
-            type="password"
-            id="companyConfirmPassword"
-            name="companyConfirmPassword"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-          />
+          <div className='signup-input-form'>
+
+            <input
+              type="password"
+              id="companyConfirmPassword"
+              name="companyConfirmPassword"
+              value={confirmPassword}
+              className='signup-input'
+              placeholder='Password must match'
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+          </div>
           <button type="submit">Sign Up</button>
         </form>
       </div>
-      <div className="additional-options">
-        <Link to="/signup/job-seeker" className="looking-for-work">
-          Looking for work instead? Click here.
-        </Link>
+      <div className='signup-info'>
+        <h1>Find a <span style={{color: "#3498db"}}>job fast</span> with <br/> WebWorkWave</h1>
+        <img src="https://th.bing.com/th/id/OIP.W9jm3do9gp-Byyk7EZauewHaE8?pid=ImgDet&rs=1" className='signup-background' alt='background'/>
+        <div className="additional-options">
+          Looking for work instead? 
+          <Link to="/signup/job-seeker" className="click">
+            Click here.
+          </Link>
+        </div>
       </div>
     </div>
   );

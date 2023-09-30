@@ -2,15 +2,20 @@
 
 .signup-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
+.signup-info {
+  width: 100%;
+}
+h1, h3 {
+  text-wrap: balance;
+}
 .user-type-button {
   font-size: 18px;
   padding: 10px 20px;
@@ -38,14 +43,16 @@
   margin: 10px;
 }
 
-.signup-option p {
-  font-size: 16px;
-  margin-top: 10px;
+.signup-option h2 {
+  font-size: 25px;
+  margin-bottom: -8px;
 }
-
 .signup-option button {
+  width: 100%;
   font-size: 18px;
+  font-weight: bold;
   padding: 10px 20px;
+  border-radius: 4px;
   background-color: #3498db;
   color: white;
   border: none;
@@ -68,28 +75,46 @@
   align-self: center;
 }
 
-/* Style the form elements */
-form {
-  max-width: 400px;
-  width: 100%;
-}
+
 
 label {
   display: block;
   font-size: 18px;
   margin-top: 10px;
+  margin-bottom: 8px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="password"] {
+.signup-name-header-form {
+  display: flex;
   width: 100%;
+  gap: 10px;
+}
+
+.signup-background {
+  width: 100%;
+  height: 350px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.signup-input-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid gray;
+  color: gray;
+  border-radius: 4px;
+}
+
+.signup-input {
   padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-top: 5px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: transparent;
+  margin-right: 12px;
 }
 
 input[type="submit"] {
@@ -97,9 +122,10 @@ input[type="submit"] {
   padding: 10px;
   font-size: 18px;
   background-color: #3498db;
+  font-weight: bold;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   margin-top: 20px;
   cursor: pointer;
   transition: background-color 0.2s;
@@ -114,8 +140,9 @@ input[type="submit"]:hover {
   text-align: center;
 }
 
-.forgot-password,
-.login {
+
+
+.login, .signup, .signin, .click {
   font-size: 16px;
   text-decoration: none;
   color: #3498db;
@@ -125,4 +152,13 @@ input[type="submit"]:hover {
 .forgot-password:hover,
 .login:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+  .signup-container {
+    flex-direction: column;
+  }
+  .signup-option {
+    width: 90%;
+  }
 }

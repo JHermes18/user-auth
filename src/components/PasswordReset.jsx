@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { IoMailOutline} from "react-icons/io5";
 import './PasswordReset.css';
 
 function PasswordReset() {
@@ -14,14 +15,18 @@ function PasswordReset() {
       <h2>Reset Password</h2>
       <form onSubmit={handleReset}>
         <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
+        <div className='forgot-input-form'>
+          <IoMailOutline size={25} className='forgot-icon'/>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={email}
+            className='forgot-input'
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
         <input type="submit" value="Reset Password" />
       </form>
     </div>

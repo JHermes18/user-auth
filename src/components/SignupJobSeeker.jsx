@@ -18,71 +18,109 @@ function SignupJobSeeker() {
   return (
     <div className="signup-container">
       <div className="signup-option">
-        <h2>I am looking for work</h2>
+        <h3>Be WebWorkWave's Candidate</h3>
         <form onSubmit={handleSignup}>
-          <label htmlFor="firstName">First Name:</label>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            required
-          />
-          {/* Add input fields for job seeker registration */}
-          <label htmlFor="lastName">Last Name:</label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            required
-          />
+          <div className='signup-name-header-form'>
+            <div>
+            <label htmlFor="firstName">First Name:</label>
+            <div className='signup-input-form'>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                value={firstName}
+                className='signup-input'
+                placeholder='John'
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+              />
+            </div>
+            </div>
+            <div>
+              <label htmlFor="lastName">Last Name:</label>
+              <div className='signup-input-form'>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  value={lastName}
+                  className='signup-input'
+                  placeholder='Doe'
+                  onChange={(e) => setLastName(e.target.value)}
+                  required
+                />
+              </div>
+            </div>
+          </div>
           <label htmlFor="jobSeekerEmail">Email:</label>
-          <input
-            type="email"
-            id="jobSeekerEmail"
-            name="jobSeekerEmail"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+          <div className='signup-input-form'>
+
+            <input
+              type="email"
+              id="jobSeekerEmail"
+              name="jobSeekerEmail"
+              value={email}
+              className='signup-input'
+              placeholder='johndoe123@gmail.com'
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
           <label htmlFor="contactNumber">Contact Number:</label>
-          <input
-            type="tel"
-            id="contactNumber"
-            name="contactNumber"
-            value={contactNumber}
-            onChange={(e) => setContactNumber(e.target.value)}
-            required
-          />
+          <div className='signup-input-form'>
+
+            <input
+              type="tel"
+              id="contactNumber"
+              name="contactNumber"
+              value={contactNumber}
+              className='signup-input'
+              placeholder='09123456789'
+              onChange={(e) => setContactNumber(e.target.value)}
+              required
+            />
+          </div>
           <label htmlFor="jobSeekerPassword">Password:</label>
-          <input
-            type="password"
-            id="jobSeekerPassword"
-            name="jobSeekerPassword"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+          <div className='signup-input-form'>
+
+            <input
+              type="password"
+              id="jobSeekerPassword"
+              name="jobSeekerPassword"
+              value={password}
+              className='signup-input'
+              placeholder='Password must be atleast 6 characters'
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
           <label htmlFor="jobSeekerConfirmPassword">Confirm Password:</label>
-          <input
-            type="password"
-            id="jobSeekerConfirmPassword"
-            name="jobSeekerConfirmPassword"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-          />
+          <div className='signup-input-form'>
+
+            <input
+              type="password"
+              id="jobSeekerConfirmPassword"
+              name="jobSeekerConfirmPassword"
+              value={confirmPassword}
+              className='signup-input'
+              placeholder='Password must match'
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+          </div>
           {/* You can add more job seeker fields here */}
           <button type="submit">Sign Up</button>
         </form>
       </div>    
-      <div className="additional-options">
-        <Link to="/signup/company" className="looking-for-work">
-          Looking for work instead? Click here.
-        </Link>
+      <div className='signup-info'>
+        <h1>Find a <span style={{color: "#3498db"}}>job fast</span> with <br/> WebWorkWave</h1>
+        <img src="https://th.bing.com/th/id/OIP.W9jm3do9gp-Byyk7EZauewHaE8?pid=ImgDet&rs=1" className='signup-background' alt='background'/>
+        <div className="additional-options">
+          Looking for work instead? 
+          <Link to="/signup/company" className="click">
+            Click here.
+          </Link>
+        </div>
       </div>
     </div>
   );
